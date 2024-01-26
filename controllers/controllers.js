@@ -98,7 +98,7 @@ const addRideInfo = async (req, res) => {
 const getRides = async (req, res) => {
   try {
     const getRideData = await addRideModel.find();
-    console.log(getRideData);
+    //     console.log(getRideData);
     res.json(getRideData);
   } catch (error) {
     console.log(error);
