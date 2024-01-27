@@ -17,6 +17,9 @@ const addRide = mongoose.Schema({
     type: String,
     //     required: true,
   },
+  phoneNo: {
+    type: Number,
+  },
   vechileTpye: {
     type: String,
     //     required: true,

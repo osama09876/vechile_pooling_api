@@ -50,8 +50,15 @@ const login = async (req, res) => {
 
 const addRide = async (req, res) => {
   try {
-    const { name, vechileName, pickUp, dropOf, vechileTpye, isOnline } =
-      req.body;
+    const {
+      name,
+      vechileName,
+      pickUp,
+      dropOf,
+      phoneNo,
+      vechileTpye,
+      isOnline,
+    } = req.body;
     const vechileExist = await addRideModel.findOne({ name: name });
     if (vechileExist) {
       res.json({ msg: "Ride already exist" });
@@ -61,6 +68,7 @@ const addRide = async (req, res) => {
         vechileName,
         pickUp,
         dropOf,
+        phoneNo,
         vechileTpye,
         isOnline,
       });
